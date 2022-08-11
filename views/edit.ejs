@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Communication Project</title>
+    
+        <link rel='stylesheet' href='/stylesheets/project.css' />
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-list">
+            <li><a href="/chats">Group Chat</a></li>
+            <li class=manage-users"><a href="/users">Manage Users</a></li>
+            <li><a href="/docList">Manage Documents</a></li>
+            <li><a href="../Login Page/Logout.html">Logout</a></li>
+        </nav>
+    </header>
+    
+  
+    <form class="edit-user-form" action="/update/<%=user.id%>" method="post">
+        <h4>Edit User Information</h4>
+        <!-- <input type="hidden" name="_method" value="put"> -->
+        <section class="edit-name-section" id="fname">
+            <label for="name">Full Name</label>
+            <input type="text"  name="fullName" value="<%= user.fullName %>">
+        </section>
+        <section class="edit-email-section" id="edit-email">
+            <label for="email">Email</label>
+            <input type="email"  id="editEmail" name="email" value="<%= user.email %>">
+        </section>
+
+        <button type="submit" class="edit-button">Save</button>
+    </form>
+
+
+</body>
+
+</html>

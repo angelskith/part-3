@@ -1,0 +1,154 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Documents</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel='stylesheet' href='/stylesheets/project.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-list">
+            <li><a href="/chats">Group Chat</a></li>
+            <li><a href="/users">Manage Users</a></li>
+            <li class="manage-users"><a href="/docList">Manage Documents</a></li>
+            <li><a href="../Login Page/Logout.html" onclick="logout()">Logout</a></li>
+        </nav>
+    </header>
+
+    <!-- MY UPLOADS -->
+    <h3 class="docs-list-upload">My Uploads</h3>
+    <table class="">
+        <thead>
+            <tr>
+                <th class="table-doclist-label">Label</th>
+                <th class="table-doclist-filename">File Name</th>
+                <th class="table-doclist-action">Action</th>
+            </tr>
+        </thead>
+        <tbody id="dataTable">
+
+            <% files.forEach((file)=> {%>
+                <tr>
+                    <td> <%=file.filelabel %></td>
+                    <td><%=file.filename %></td>
+                    <td>
+                       <a class="edit-doclist-action" href="#editModal" >Edit</a> | 
+                       <a class="delete-doclist-action"
+                       href="#doclistDelete" ">Delete</a> | 
+                       <a class="share-doclist-action" href="/share/<%=file._id%>" >Share</a>
+                    </td>
+                 </tr>
+          <% }) %>
+
+
+
+            <!-- Delete Modal PopUp -->
+            <div class="card doclist-delete-modal" id="doclistDelete">
+                <div class="card-headers">
+                    <h3 class="doclist-delete-confirm">Confirm File Deletion</h3>
+                    <i class="fa fa-times doclist-delete-icon" type="button" onclick="location.href='#'"
+                        aria-hidden="true"></i>
+                </div>
+
+                <div class="card-body">
+                    <img class="logo" src="iconq.jpg" width="50px" height="50px">
+                    <h3 class="card-title doclist-confirmation-delete">Are you sure ?</h3>
+                    <section class="doclist-button-section">
+                        <button class="doclist-button-ok" type="button" id="delete-file-btn"
+                            onclick="location.href='#'">ok</button>
+                        <button onclick="location.href='#'" type="button" class="doclist-button-cancel">Cancel</button>
+                    </section>
+                </div>
+            </div>
+
+        </tbody>
+    </table>
+
+    <!-- Shared Uploads -->
+    <h3 class="docs-list-shared">Shared Uploads</h3>
+    <table class="">
+        <thead>
+            <tr>
+                <th class="table-sharedlist-label">Label</th>
+                <th class="table-sharedlist-filename">File Name</th>
+                <th class="table-sharedlist-action">Shared by</th>
+            </tr>
+        </thead>
+        <tbody id="sharedTable">
+
+           
+            <tr style="height:25px;" id="gg">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr style="height:25px;">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr style="height:25px;">
+                <td><button onclick="location.href='#addUpload'" type="button" class="table-sharedlist-addupload-btn">+
+                        Add Upload</button></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Upload modal -->
+    <div class="card add-upload-modal" id="addUpload" style="max-width: 50rem; width: 35rem; height:15rem;">
+        <div class="card-headers"><span class="add-upload">Upload</span>
+            <i class="fa fa-times delete-icon-add-upload" type="button" onclick="location.href='#'"
+                aria-hidden="true"></i>
+        </div>
+        <div class="card-body">
+            <form action="/docList" enctype="multipart/form-data" method="POST">
+                <label class="label-description" for="description">File Description</label>
+                <input class="input-file-description" type="text" name="filelabel" id="file-label">
+
+                <div class="file-upload-wrapper">
+                    <label class="label-file-upload" for="file-upload">File Upload</label>
+                    <input class="choose-file-btn" id="upload-file" type="file" name="uploadFile">
+                    <!-- <label class="label-sample-doc" for="sample-doc">Sample.doc</label> -->
+                </div>
+                <div class="upload-cancel-button-wrapper">
+                    <button type="submit" class="uploadNow-button" id="uploadBtn">Upload Now</button>
+                    <button onclick="location.href='#'" type="button" class="uploadCancel-button">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit modal  --------------------------------- -->
+    <div class="card add-edit-modal" id="editModal" style="max-width: 50rem; width: 35rem; height:15rem;">
+        <div class="card-headers"><span class="edit-popup">Edit</span>
+            <i class="fa fa-times edit-icon" onclick="location.href='#'" type="button" aria-hidden="true"></i>
+        </div>
+        <div class="card-body">
+            <form>
+                <label class="label-description" for="description">File Description</label>
+                <input class="input-file-description" type="text" name="file-descript" id="file-descript" value="">
+            </form>
+
+            <div class="edit-button-wrapper">
+                <button type="button" class="editSave-button" id="saveLabel">Save</button>
+                <button onclick="location.href='#'" type="button" class="editCancel-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

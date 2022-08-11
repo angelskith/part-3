@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Communication Project</title>
+    <link rel='stylesheet' href='/stylesheets/project.css' />
+</head>
+
+<body>
+
+   <div class="container">
+     
+    <form class="register-form" action="/register" method="post">
+        <header>
+            <h3>Register</h3>
+        </header>
+
+        <section class="name-section">
+            <label for="fullname">Full Name</label>
+            
+            <input type="name" placeholder="Enter your name" id="fname" name="fullName"><br>
+
+        </section>
+
+        <section class="register-email-section">
+            <label for="email">Email</label>
+            <input type="text" placeholder="Enter your email" id="register-email" name="email">
+        </section>
+
+        <section class="register-password-section">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter your password" id="register-password" name="password">
+        </section>
+
+        <section class="confirm-password-section">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" placeholder="Enter your password" id="confirm-password" name="confirmPassword">
+        </section>
+
+        <button type="submit" class="register-button" >Register</button>
+    </form>
+
+    <footer>
+        <section class="register-footer-section">
+            <!-- <p>errors</p> -->
+        </section>
+    </footer>
+
+</div> 
+</body>
+
+</html>

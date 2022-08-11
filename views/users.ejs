@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Users</title>
+
+    <link rel='stylesheet' href='/stylesheets/project.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-list">
+            <li><a href="/chats">Group Chat</a></li>
+            <li class="manage-users"><a href="/users">Manage Users</a></li>
+            <li><a href="/docList">Manage Documents</a></li>
+            <li><a href="../Login Page/Logout.html" id="logout">Logout</a></li>
+        </nav>
+    </header>
+
+    <form action="/users" method="get">
+        <label class="users">Users</label>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="table-name">Name</th>
+                    <th class="table-user-email-add">User Email</th>
+                    <th class="table-edit-delete"></th>
+                </tr>
+            </thead>
+            <tbody id="dataTable">
+
+                <% users.forEach((user)=> {%>
+                    <tr>
+                        <td>
+                            <%=user.fullName %>
+                        </td>
+                        <td>
+                            <%=user.email %>
+                        </td>
+                        <td>
+                            <a id="edit" href="/edit/<%=user.id%>">Edit</a>
+                            |<a href="/users/<%=user.id%>#modal-delete" id="modalDelete">Delete</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+
+
+            </tbody>
+        </table>
+        <form />
+
+        <!-- Delete Modal PopUp  -->
+        <form class="" action="/delete/<%=id%>" method="post">
+            <div class="card delete-modal" id="modal-delete">
+                <div class="card-headers">
+                    <i class="fa fa-times  delete-icon" type="button" onclick="location.href='#'"
+                        aria-hidden="true"></i>
+                    <h3 class="delete-confirm">Confirm User Deletion</h3>
+                </div>
+
+                <div class="card-body">
+                    <img class="logo" src="iconq.jpg" width="50px" height="50px">
+                    <h3 class="card-title confirmation-delete">Are you sure ?</h3>
+                    <section class="user-button-section">
+                        <button class="user-button-ok" type="submit" id="confirm">Ok</button>
+                        <button onclick="location.href='#'" type="submit" class="delete-button-cancel">Cancel</button>
+                    </section>
+                </div>
+            </div>
+        </form>
+
+
+</body>
+
+
+</html>

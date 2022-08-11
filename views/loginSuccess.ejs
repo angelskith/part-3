@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel='stylesheet' href='/stylesheets/project.css' />
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-list">
+            <li><a href="../Content Page/Chat.html">Group Chat</a></li>
+            <li><a href="../Content Page/User-list.html">Manage Users</a></li>
+            <li><a href="../Content Page/Docs-list.html">Manage Documents</a></li>
+            <li><a href="../Login Page/Logout.html" id="logout">Logout</a></li>
+        </nav>
+    </header>
+
+    <form action="/loginSuccess" method="get">
+        <section class="login-success-section">
+            <h3>Login Successful</h3>
+            <h5><span class="welcome">Welcome !</span>&nbsp;<span id="userlog"><%= activeUser %></span></h5>
+        </section>
+    </form>
+</body>
+
+</html>

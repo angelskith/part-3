@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Communication Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/project.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-list">
+            <li class="group-chat"><a href="/chats">Group Chat</a></li>
+            <li><a href="/users">Manage Users</a></li>
+            <li><a href="/docList">Manage Documents</a></li>
+            <li><a href="../Login Page/Logout.html" id="logout">Logout</a></li>
+        </nav>
+    </header>
+
+    <div class="card card-groupchat">
+        <div class="card-header"><span class="chatbox-groupchat">Group Chat</span>
+            <i class="fa fa-times delete-icon-groupchat" aria-hidden="true"></i>
+        </div>
+
+        <div class="card-body card-body-groupchat">
+            <div class="chat-message" id="chat-box">
+                
+                <% chats.forEach((chat)=> {%>
+                        <p>
+                            <spa>[<%= chat.date %>>]</spa> user :  <%= chat.msg %>
+                        </p>
+                  <% }) %>
+
+            </div>
+        </div>
+
+        <div class="card-footer card-chatbox">
+            <form action="/chats" method="POST">
+                <label for="chat-name" id="user-online"></label>
+                <input class="input-chat-message" type="text" name="msg" id="chat-msg">
+                <button class="btn-chat-send" type="submit" id="send-chat">Send</button>
+                <button class="" btn-chat-refresh>Refresh</button>
+            </form>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

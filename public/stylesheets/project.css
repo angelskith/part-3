@@ -1,0 +1,985 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/* WELCOME ----------------------------------------------*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    justify-content: space-evenly;
+}
+
+.login-section h5 {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+.login-section button {
+    border-radius: 8px;
+    padding: 3px 40px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+
+.register-section h5 {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 25px;
+}
+
+.register-section button {
+    border-radius: 8px;
+    padding: 3px 35px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+/*  Login ---------------------------------------------- */
+
+.email-section,
+.password-section {
+    margin-right: 60px;
+}
+
+.email-section label {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.email-section input {
+    border: 2px solid;
+    border-radius: 6px;
+}
+
+.password-section label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: -50px;
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.password-section input {
+    border: 2px solid;
+    border-radius: 6px;
+    margin-left: 15px;
+}
+
+.email-section {
+    margin-top: -100px;
+    padding: 35px 0px;
+}
+
+.login-button {
+    border-radius: 8px;
+    padding: 3px 40px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 100px;
+    background-color: #66ffff;
+}
+
+
+/*  LOGIN SUCCESSFUL -----------------------------------------------------------*/
+
+/* Navbar */
+.nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    border: 2px solid;
+    text-align: center;
+    height: 6vh;
+}
+
+.nav-list li {
+    background-color: #BFBFBF;
+    flex-basis: 100%;
+    border-right: 2px solid;
+    padding: 10px 0px;
+}
+
+.nav-list li:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+
+.nav-list li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.login-success-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 30px;
+}
+
+.login-success-section h5 {
+    font-size: 1rem;
+}
+
+.login-success-section .welcome {
+    font-weight: bold;
+}
+
+
+/* Register ---------------------------------------------------------------*/
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 60px;
+}
+
+.register-form label {
+    font-weight: bold;
+}
+
+.register-form input {
+    border-radius: 6px;
+    margin-left: 20px;
+}
+
+.name-section {
+    margin-right: 100px;
+}
+
+.register-email-section {
+    margin-right: 65px;
+}
+
+.register-password-section {
+    margin-right: 95px;
+}
+
+.confirm-password-section {
+    margin-right: 160px;
+}
+
+.register-button {
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 2px 35px;
+    background-color: #66ffff;
+}
+
+.register-footer-section {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    font-weight: bold;
+    color: #FFF4A3;
+    background-color: #FFF4A3;
+    width: 25%;
+    margin-top: 30px;
+    margin-left: 715px;
+    text-align: center;
+    
+    
+   
+}
+
+/* Registration Successful ----------------------------------------------*/
+
+.registration-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.registration-successful {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.return-home {
+    font-size: 15px;
+}
+
+/* User-list -------------------------------------------------------------*/
+
+.nav-list .manage-users {
+    background-color: whitesmoke;
+}
+
+.users {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 25px 15px;
+}
+
+table {
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: separate;
+    border-radius: 7px;
+    border-spacing: 0;
+}
+
+th {
+    background-color: #CCCCCC;
+}
+
+table,
+th,
+td {
+    border-right: 1px solid;
+}
+
+tr:nth-child(even) {
+    background-color: #F0F0F0;
+}
+
+td:nth-child(1) {
+    padding-left: 5px;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+    text-align: center;
+}
+
+table .table-name {
+    width: 40%;
+    padding: 5px;
+}
+
+table .table-user-email-add {
+    width: 40%;
+    text-align: center;
+}
+
+table .table-edit-delete {
+    width: 20%;
+}
+
+.delete-user {
+    font-size: 1em;
+    text-decoration: none !important;
+    color: black;
+}
+
+
+/* Edit-user ---------------------------------------------------------------*/
+
+.edit-user-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 60px;
+}
+
+.edit-user-form h4 {
+    padding-left: 80px;
+}
+
+.edit-name-section label {
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+.edit-name-section input {
+    border: 2px solid;
+    border-radius: 6px;
+}
+
+.edit-email-section {
+    margin-left: 25px;
+}
+
+.edit-email-section label {
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.edit-email-section input {
+    border: 2px solid;
+    border-radius: 6px;
+    margin-left: 17px;
+}
+
+.edit-button {
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 2px 35px;
+    background-color: #66ffff;
+    font-weight: bold;
+    margin-left: 90px;
+}
+
+/* User-List delete modal pop-up  ---------------------------------------------------------------*/
+
+.delete-modal {
+    position: absolute;
+    height: auto;
+    right: 44%;
+    top: 30%;
+    border: 1px solid;
+    display: none;
+    width: 17rem;
+    height: 22%;
+}
+
+.delete-modal:target {
+    display: block;
+}
+
+.delete-confirm {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.delete-icon {
+    position: relative;
+    float: right;
+    top: -10px;
+    border: solid 1px;
+    border-radius: 3px;
+    padding: 10px 12px;
+   
+}
+
+.confirmation-delete {
+    font-size: 1.3rem;
+    margin-left: 85px;
+    margin-top: 25px;
+}
+
+.logo {
+    position: absolute;
+    margin-left: 23px;
+    top: 65px;
+}
+
+.user-button-section{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.user-button-section button {
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 2px 20px;
+    margin: 0px 3px
+}
+
+.user-button-section .user-button-ok {
+    padding: 2px 35px;
+}
+
+.-headers {
+    border-bottom: solid 1px;
+
+}
+
+/* Chat-message  ---------------------------------------------------------------*/
+
+.chatbox-groupchat {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.delete-icon-groupchat {
+    position: relative;
+    float: right;
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 6px 10px;
+}
+
+.card-groupchat {
+    border: 2px solid;
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+    height:70%;
+}
+
+.nav-list .group-chat {
+    background-color: whitesmoke;
+}
+
+.card-body-groupchat {
+    border: 2px solid;
+}
+
+.chat-message {
+    text-align: left;
+    line-height: .4rem;
+    padding-top: 30px;
+    font-weight: 500;
+}
+
+.card-chatbox {
+    text-align: left;
+    padding: 20px 200px 0px;
+}
+
+.input-chat-message {
+    width: 80%;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.card-chatbox label {
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+.card-chatbox button {
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Docs-list  ---------------------------------------------------------------*/
+
+    /* My uploads - doclist */
+.docs-list-upload {
+    float: left;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: separate;
+    border-radius: 7px;
+    border-spacing: 0;
+}
+
+th {
+    background-color: #CCCCCC;
+}
+
+table,
+th,
+td {
+    border-right: 1px solid;
+}
+
+tr:nth-child(even) {
+    background-color: #F0F0F0;
+}
+
+td:nth-child(1) {
+    padding-left: 5px;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+    text-align: center;
+}
+
+table .table-doclist-label {
+    width: 40%;
+    padding: 5px;
+}
+
+table .table-doclist-filename {
+    width: 40%;
+    text-align: center;
+}
+
+table .table-doclist-action {
+    width: 20%;
+    text-align: center;
+}
+
+.delete-doclist-action {
+    font-size: 1em;
+}
+
+
+/* Shared uploads - doclist */
+.docs-list-shared {
+    float: left;
+    padding-left: 10px;
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: separate;
+    border-radius: 7px;
+    border-spacing: 0;
+}
+
+th {
+    background-color: #CCCCCC;
+}
+
+table,
+th,
+td {
+    border-right: 1px solid;
+}
+
+tr:nth-child(even) {
+    background-color: #F0F0F0;
+}
+
+td:nth-child(1) {
+    padding-left: 5px;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+    text-align: center;
+}
+
+table .table-sharedlist-label {
+    width: 40%;
+    padding: 5px;
+}
+
+table .table-sharedlist-filename {
+    width: 40%;
+    text-align: center;
+}
+
+table .table-sharedlist-action {
+    width: 20%;
+    text-align: center;
+}
+
+.table-sharedlist-addupload-btn {
+    border-radius: 5px;
+    font-size: .8em;
+    padding-bottom: 3px;
+    padding-right: 25px;
+    background-color: #66ffff;
+}
+
+/* Add Upload Modal PopUp  ---------------------------------------------------------------*/
+
+.add-upload-modal {
+    position: absolute;
+    height: auto;
+    right: 55%;
+    top: 25%;
+    border: 2px solid;
+    display: none;
+    text-align: center;
+}
+
+.add-upload-modal:target {
+    display: block;
+}
+
+.add-upload {
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.delete-icon-add-upload {
+    position: relative;
+    float: right;
+    border: solid 1px;
+    border-radius: 3px;
+    padding: 5px 9px;
+}
+
+.card-body .label-description {
+    font-weight: bold;
+    padding-right: 18px;
+}
+
+.input-file-description {
+    width: 73%;
+    border-radius: 5px;
+}
+
+.file-upload-wrapper {
+    position: relative;
+}
+
+.file-upload-wrapper {
+    margin-top: 30px;
+}
+
+.card-body .label-file-upload {
+    font-weight: bold;
+
+}
+
+.choose-file-btn {
+    border-radius: 9px;
+    font-size: .9em;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+.label-sample-doc {
+    font-weight: bold;
+    font-size: 1em;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.uploadNow-button {
+    font-size: .9em;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+.uploadCancel-button {
+    font-size: .9em;
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 0px 20px;
+    margin-left: 10px;
+}
+
+.upload-cancel-button-wrapper {
+    margin-top: 35px;
+    margin-right: 320px;
+}
+
+.card-headers {
+    border-bottom: solid 1px;
+    height: 1.8rem;
+}
+
+    /* Delete modal  doclist */
+.doclist-delete-modal {
+    position: absolute;
+    height: auto;
+    right: 44%;
+    top: 30%;
+    border: 1px solid;
+    display: none;
+    width: 17rem;
+    height: 22%;
+}
+
+.doclist-delete-modal:target {
+    display: block;
+}
+
+.doclist-delete-confirm {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.doclist-delete-icon {
+    position: relative;
+    float: right;
+    top: -37px;
+    border: solid 1px;
+    border-radius: 3px;
+    padding: 10px 12px;
+   
+}
+
+.doclist-confirmation-delete {
+    font-size: 1.3rem;
+    margin-left: 85px;
+    margin-top: 25px;
+}
+
+.logo {
+    position: absolute;
+    margin-left: 23px;
+    top: 65px;
+}
+
+.doclist-button-section{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.doclist-button-section button {
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 2px 20px;
+    margin: 0px 3px
+}
+
+.doclist-button-section .doclist-button-ok {
+    padding: 2px 35px;
+}
+
+.card-headers {
+    border-bottom: solid 1px;
+
+}
+
+/* Edit Modal PopUp  ---------------------------------------------------------------*/
+
+.add-edit-modal {
+    position: absolute;
+    height: auto;
+    right: 54%;
+    top: 25%;
+    border: 2px solid;
+    display: none;
+    text-align: center;
+}
+
+.add-edit-modal:target {
+    display: block;
+}
+
+
+.edit-popup {
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.edit-icon {
+    position: relative;
+    float: right;
+    border: solid 1px;
+    border-radius: 3px;
+    padding: 5px 9px;
+}
+
+.card-body .label-description {
+    font-weight: bold;
+    padding-right: 18px;
+}
+
+.input-file-description {
+    width: 73%;
+    border-radius: 5px;
+}
+
+.editSave-button {
+    font-size: .9em;
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 5px 30px;
+}
+
+.editCancel-button {
+    font-size: .9em;
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 5px 20px;
+    margin-left: 10px;
+}
+
+.edit-button-wrapper {
+    margin-top: 35px;
+    margin-right: 50px;
+}
+
+.card-headers {
+    border-bottom: solid 1px;
+    height: 1.8rem;
+}
+
+
+/* Sharing  html  ---------------------------------------------------------------*/
+
+/* Upload Sharing */
+.share-upload {
+    float: left;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: separate;
+    border-radius: 7px;
+    border-spacing: 0;
+}
+
+th {
+    background-color: #CCCCCC;
+}
+
+table,
+th,
+td {
+    border-right: 1px solid;
+}
+
+tr:nth-child(even) {
+    background-color: #F0F0F0;
+}
+
+td:nth-child(1) {
+    padding-left: 5px;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+    text-align: center;
+}
+
+table .table-doclist-label {
+    width: 40%;
+    padding: 5px;
+}
+
+
+table .table-doclist-action {
+    width: 40%;
+    text-align: center;
+}
+
+.delete-doclist-action {
+    font-size: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+.edit-doclist-action {
+    font-size: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+.share-doclist-action {
+    font-size: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+/* Add Sharing */
+
+.add-sharing .label-share {
+    font-weight: bold;
+    padding-right: 18px;
+}
+
+.input-file-description {
+    width: 73%;
+    border-radius: 5px;
+}
+
+/* Dropdown */
+
+
+.add-sharing-label {
+    display: flex;
+    padding-left: 10px;
+    padding-top: 25px;
+}
+
+.add-sharing {
+    border: 2px solid;
+    margin-top: 5px;
+}
+
+.add-sharing-form {
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 50px;
+}
+
+.add-share-button {
+    margin-left: 40px;
+    border-radius: 10px;
+    padding: 3px 20px;
+    background-color: #BFBFBF
+}
+
+.User-options {
+    width: 20%;
+    height: 35px;
+    border: 2px solid;
+    border-radius: 5px;
+    text-align: center;
+    font: 1em sans-serif;
+}
+
+/* Remove modal  Share */
+.share-delete-modal {
+    position: absolute;
+    height: auto;
+    right: 40%;
+    top: 20%;
+    border: 1px solid;
+    display: none;
+    width: 17rem;
+    height: 22%;
+    z-index: 1;
+}
+
+.share-delete-modal:target {
+    display: block;
+}
+
+.share-delete-confirm {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.share-delete-icon {
+    position: relative;
+    float: right;
+    top: -10px;
+    border: solid 1px;
+    border-radius: 3px;
+    padding: 10px 12px;
+   
+}
+
+.share-confirmation-delete {
+    font-size: 1.3rem;
+    margin-left: 85px;
+    margin-top: 25px;
+}
+
+.logo {
+    position: absolute;
+    margin-left: 23px;
+    top: 65px;
+}
+
+.share-button-section{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.share-button-section button {
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 2px 20px;
+    margin: 0px 3px
+}
+
+.share-button-section .share-button-ok {
+    padding: 2px 35px;
+}
+
+.share-card-headers {
+    border-bottom: solid 1px;
+
+}
+
